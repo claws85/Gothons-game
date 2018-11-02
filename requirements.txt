@@ -7,3 +7,5 @@ Jinja2
 SQLAlchemy
 Werkzeug
 gunicorn
+os
+psycopg2

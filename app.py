@@ -7,10 +7,14 @@ from wtforms.validators import InputRequired, Length
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_bootstrap import Bootstrap
+import os
+import psycopg2
 
 app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Wi$$ows12@localhost/gothons'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Wi$$ows12@localhost/gothons'
+DATABASE_URL = os.environ['postgres://xtrdxjlqkvxjqh:7eb9ed8ef4b09f88f67745c810a715e399fb7c0e1b8b4c54db69734f1207d307@ec2-54-225-115-234.compute-1.amazonaws.com:5432/drpbg9st86t3']
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
