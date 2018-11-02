@@ -1,0 +1,107 @@
+body {
+    background-image: url('/static/img/space.png');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-family: 'Courier';
+    font-size: 20px;
+
+}
+
+p.wintext {
+    color: yellow;
+    font-weight: bold;
+}
+
+h1 {font-family: Galactica; 
+    color: yellow;
+    text-align: center;
+}
+
+input {
+    width: 20%;
+    margin: 8px 0;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: gray;
+    width: 10%;
+}
+
+a { 
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+ }
+
+ a:hover {
+    text-decoration: underline;
+ }
+
+ a:visited {
+    color: pink;
+ }
+
+ a.left {
+     margin-left: 120px;
+}
+
+a.right {
+    margin-right: 120px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    font-size: 18px;
+    text-align: center; 
+}
+
+th {
+    font-size: 20px;
+    font-family: 'Courier';
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    font-family: 'Courier';
+    font-size: 25px;
+    color: white;
+    padding-bottom: 2%;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.tab { 
+    margin-left: 100px; 
+}
+
+.incorrect {
+    color: red
+}
+
+@font-face {
+    font-family: Galactica;
+    src: url('/static/BATTLEST.TTF')   
+}

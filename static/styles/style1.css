@@ -1,0 +1,19 @@
+body {   
+    background-image: url('/static/img/space.png');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    color: white;
+    margin-left: 200px;
+}
+
+
+@font-face {
+    font-family: Galactica;
+    src: url('/static/BATTLEST.TTF')   
+}

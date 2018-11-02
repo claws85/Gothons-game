@@ -1,0 +1,12 @@
+<html>
+    <head>
+    <title>Gothons From Planet Percal #25</title>
+    </head>
+        <body>
+            <form method="POST" action="{{ url_for('form') }}">
+                {{ form.csrf_token }}
+                {{ form.playername.label }}
+                {{ form.playername }}
+            </form>
+        </body>
+</html>

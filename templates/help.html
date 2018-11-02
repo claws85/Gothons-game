@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1> HELP - {{ room.name }} </h1>
+<pre>
+{{ room.help }}
+</pre>
+    <p><a href="/game">Back to game</a></p>
+
+{% endblock %}

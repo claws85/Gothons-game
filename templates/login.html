@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1> Gothons from Percal #25 </h1>
+        <body>
+            <p>
+               Please log in to play... 
+            </p>
+            <form method="POST" action="{{ url_for('index') }}">
+                {{ form.csrf_token }}
+                {{ form.playername.label }}
+                {{ form.playername }}
+                <br>
+                {{ form.password.label }}
+                {{ form.password }}
+                <input type="submit" value="Submit"> 
+            </form>
+        </body>
+</html>
+
+{% endblock %}

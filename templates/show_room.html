@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1> {{ room.name }} </h1>
+<pre>
+{{ room.description }}
+</pre>
+
+{% if room.name in ["The End"] %}
+    <p class="wintext"> You completed the game - great work space trooper!<br> 
+        <br>
+        You destroyed the Gothons in {{ turns.count }} moves.<br>
+        <br>
+        <br>
+        <a href="/dashboard"> -- See high scores -- </a>    
+    </p>
+{% endif %}
+
+{% if room.name in ["Squish !!!"] %}
+    <p> You got squished at the final hurdle.<br>
+    <br>
+    Better luck next time!
+    </p>
+{% endif %}
+
+{% if room.name in ["death", "The End", "Squish !!!"] %}
+    <p><a href="/playagain"> -- Play again -- </a><br>
+    <br>
+    <a href="/logout"> -- Log out -- </a>    
+    </p>
+{% else %}
+    <p>
+    <form action="/game" method="POST">
+    >>> <input type="text" name="action"> <input type="SUBMIT">
+    </form>
+    </p>
+{% endif %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div role="alert">
+            {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+{% if room.name not in ["death", "The End", "Squish !!!"] %}
+    <p><a href="/help">-- Help --</a><br>
+    <a href="/logout">-- Log out --</a></p>
+
+{% endif %}
+
+{% endblock %}

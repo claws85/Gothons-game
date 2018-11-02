@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1> Gothons from Percal #25 </h1>
+
+        <body>
+            <p>
+               Please register. 
+            </p>
+            <form method="POST" action="{{ url_for('register') }}">
+                {{ form.csrf_token }}
+                {{ form.playername.label }}
+                {{ form.playername }}
+                <ul>
+                    {% for error in form.playername.errors %}
+                    <li style="color:red;">{{error}}</li>
+                    {% endfor %}
+                </ul>
+                {{ form.password.label }}
+                {{ form.password }}
+                <input type='submit' value="Submit">
+            </form>
+        <br>
+        <br>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-warning alert-dismissable" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <a href="/">-- Log in --</a>
+            {% endif %}
+        {% endwith %}
+
+        </body>
+
+{% endblock %}

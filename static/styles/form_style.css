@@ -1,0 +1,19 @@
+form{
+    max-width: 500px;
+    padding: 20px 12px 10px 20px;
+    font: 13px Arial, Helvetica, sans-serif;
+    
+}
+
+input {
+    border: black;
+    background-color: white
+}
+
+body{
+    background-color: burlywood
+}
+
+h1{
+    font: large
+}
