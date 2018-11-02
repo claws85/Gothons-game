@@ -10,7 +10,7 @@ from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/Charlotte/LPTHW/projects/ex52/database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Wi$$ows12@localhost/gothons'
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
