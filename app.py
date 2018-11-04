@@ -12,7 +12,7 @@ import psycopg2
 
 app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-DATABASE_URL = os.environ['DATABASE_URL'] = 'postgres://xtrdxjlqkvxjqh:7eb9ed8ef4b09f88f67745c810a715e399fb7c0e1b8b4c54db69734f1207d307@ec2-54-225-115-234.compute-1.amazonaws.com:5432/drpbg9st86t3'
+DATABASE_URL = os.environ['DATABASE_URL']
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 db = SQLAlchemy(app)
 login_manager = LoginManager()
